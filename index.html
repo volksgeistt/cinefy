@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinefy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-circle"></div>
+                    <div class="logo-mask"></div>
+                </div>
+                <h1>Cine<span>fy</span></h1>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="SEARCH FOR A MOVIE...">
+                <button id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="nav-buttons">
+                <button id="show-watchlist" class="nav-btn">
+                    <i class="fas fa-bookmark"></i>
+                    <span>WATCHLIST</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="content-header">
+                <div id="results-heading" class="section-title hidden">
+                    <h2>SEARCH RESULTS</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div id="watchlist-heading" class="section-title hidden">
+                    <h2>MY WATCHLIST</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div class="view-controls hidden" id="view-controls">
+                    <button id="back-to-search" class="control-btn hidden">
+                        <i class="fas fa-arrow-left"></i> BACK TO SEARCH
+                    </button>
+                    <button id="back-to-results" class="control-btn hidden">
+                        <i class="fas fa-arrow-left"></i> BACK TO RESULTS
+                    </button>
+                </div>
+            </div>
+            
+            <div id="movies-container" class="movies-grid"></div>
+            <div id="watchlist-container" class="movies-grid hidden"></div>
+            <div id="movie-details" class="hidden"></div>
+            
+            <div id="loading" class="hidden">
+                <div class="spinner-container">
+                    <div class="spinner-outer"></div>
+                    <div class="spinner-inner"></div>
+                </div>
+                <p>LOADING DATA</p>
+            </div>
+            
+            <div id="no-results" class="hidden">
+                <i class="fas fa-film-slash"></i>
+                <h3>NO MOVIES FOUND</h3>
+                <p>Try another search term.</p>
+            </div>
+        </main>
+
+        <div id="movie-modal" class="modal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <button class="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modal-content"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made By <a href="https://github.com/volksgeistt" target="_blank">Ujjawal Singh</a></p>
+            <p class="footer-tag">Cinefy - Your Ultimate Movie Explorer</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
